@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedoman Organisasi &mdash; GP Ansor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Plus+Jakarta+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#22261f;
+    --ink-soft:#54594c;
+    --paper:#f6f4ec;
+    --paper-raised:#fffdf6;
+    --green-deep:#1e3a2b;
+    --green-mid:#3c5a44;
+    --sage:#8a9a7c;
+    --gold:#a9812f;
+    --gold-soft:#e7d9b6;
+    --line:#d9d4c2;
+    --line-strong:#c3bda6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:64px 24px 80px;
+  }
+  .kop{
+    text-align:center;
+    padding-bottom:28px;
+    border-bottom:2px solid var(--green-deep);
+    margin-bottom:44px;
+  }
+  .kop .logo{
+    width:64px;
+    height:auto;
+    margin:0 0 18px;
+  }
+  .kop .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 10px;
+  }
+  .kop h1{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:32px;
+    line-height:1.25;
+    margin:0 0 10px;
+    color:var(--green-deep);
+  }
+  .kop p{
+    font-size:14px;
+    color:var(--ink-soft);
+    margin:0;
+    max-width:480px;
+    margin:0 auto;
+    line-height:1.6;
+  }
+  .doc-list{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+  .doc-card{
+    position:relative;
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:28px 30px 26px;
+    display:flex;
+    gap:22px;
+    align-items:flex-start;
+    overflow:hidden;
+  }
+  .doc-card::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:5px;
+    background:var(--green-deep);
+  }
+  .seal{
+    flex:none;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+  .seal::before{
+    content:"";
+    position:absolute;
+    inset:5px;
+    border:1px dashed var(--gold-soft);
+    border-radius:50%;
+  }
+  .seal span{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:15px;
+    color:var(--gold);
+    letter-spacing:0.02em;
+  }
+  .doc-body{flex:1; min-width:0;}
+  .doc-scope{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--sage);
+    margin:0 0 6px;
+  }
+  .doc-body h2{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:20px;
+    line-height:1.35;
+    margin:0 0 8px;
+    color:var(--ink);
+  }
+  .doc-body p{
+    font-size:14px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    margin:0 0 18px;
+  }
+  .doc-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:6px 10px;
+    display:inline-block;
+    margin:0 0 18px;
+  }
+  .actions{display:flex; gap:10px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Plus Jakarta Sans', sans-serif;
+    font-size:13.5px;
+    font-weight:500;
+    text-decoration:none;
+    padding:9px 16px;
+    border-radius:5px;
+    border:1px solid var(--green-deep);
+    color:var(--green-deep);
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .btn.primary{
+    background:var(--green-deep);
+    color:var(--paper-raised);
+  }
+  .btn:hover{background:var(--green-deep); color:var(--paper-raised);}
+  .btn svg{width:14px; height:14px; flex:none;}
+  footer{
+    margin-top:52px;
+    text-align:center;
+    font-size:12px;
+    color:var(--sage);
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.04em;
+  }
+  @media (max-width:520px){
+    .doc-card{flex-direction:column;}
+    .seal{width:44px; height:44px;}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kop">
+      <img src="logo-ansor.png" alt="Logo Gerakan Pemuda Ansor" class="logo">
+      <p class="eyebrow">Pimpinan Cabang Gerakan Pemuda Ansor &middot; Kabupaten Sleman</p>
+      <h1>Pusat Dokumen Tata Tertib</h1>
+      <p>Kumpulan pedoman resmi untuk penyelenggaraan forum permusyawaratan di lingkungan Gerakan Pemuda Ansor. Unduh dokumen sesuai tingkatan forum yang akan dilaksanakan.</p>
+    </div>
+
+    <div class="doc-list">
+
+      <div class="doc-card">
+        <div class="seal"><span>PP</span></div>
+        <div class="doc-body">
+          <p class="doc-scope">Tingkat Pimpinan Pusat &middot; Peraturan Induk</p>
+          <h2>Peraturan Pedoman Penyelenggaraan Konferensi &amp; Musyawarah Anggota</h2>
+          <p>Peraturan Pimpinan Pusat GP Ansor yang mengesahkan pedoman penyelenggaraan Konferensi Wilayah, Konferensi Cabang, Konferensi Anak Cabang, dan Musyawarah Anggota di seluruh tingkatan.</p>
+          <div class="doc-meta">Nomor: 2101/PP/SK-01/II/2025 &middot; DOCX</div>
+          <div class="actions">
+            <a class="btn primary" href="Peraturan_PP_Pedoman_Konferensi_dan_Musyawarah.docx" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+              Unduh dokumen
+            </a>
+            <a class="btn" href="Peraturan_PP_Pedoman_Konferensi_dan_Musyawarah.docx" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3h7v7M21 3l-9 9M5 5h6M5 5v14h14v-6"/></svg>
+              Buka
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <div class="seal"><span>AC</span></div>
+        <div class="doc-body">
+          <p class="doc-scope">Tingkat Anak Cabang &middot; Kecamatan</p>
+          <h2>Pedoman Penyelenggaraan Konferensi Anak Cabang</h2>
+          <p>Tata tertib pengesahan Konferensi Anak Cabang Gerakan Pemuda Ansor tingkat kecamatan, sebagai forum permusyawaratan tertinggi di Pimpinan Anak Cabang.</p>
+          <div class="doc-meta">Nomor: KONFERANCAB &middot; DOCX</div>
+          <div class="actions">
+            <a class="btn primary" href="Pedoman_Penyelenggaraan_Konferancab.docx" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+              Unduh dokumen
+            </a>
+            <a class="btn" href="Pedoman_Penyelenggaraan_Konferancab.docx" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3h7v7M21 3l-9 9M5 5h6M5 5v14h14v-6"/></svg>
+              Buka
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <div class="seal"><span>MA</span></div>
+        <div class="doc-body">
+          <p class="doc-scope">Tingkat Ranting &middot; Kelurahan / Desa</p>
+          <h2>Pedoman Musyawarah Anggota</h2>
+          <p>Tata tertib pengesahan Musyawarah Anggota Gerakan Pemuda Ansor tingkat kelurahan/desa, sebagai forum permusyawaratan tertinggi di Pimpinan Ranting.</p>
+          <div class="doc-meta">Nomor: MUSRAN &middot; DOCX</div>
+          <div class="actions">
+            <a class="btn primary" href="Pedoman_Musyawarah_Anggota.docx" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+              Unduh dokumen
+            </a>
+            <a class="btn" href="Pedoman_Musyawarah_Anggota.docx" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3h7v7M21 3l-9 9M5 5h6M5 5v14h14v-6"/></svg>
+              Buka
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>PC Gerakan Pemuda Ansor Kabupaten Sleman &middot; Disusun untuk keperluan internal kepengurusan</footer>
+  </div>
+</body>
+</html>
